@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Labeeb forms</title>
+        <link rel="stylesheet" href="css/myform.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <!-- <script>
+        function showFunction(item_no) {
+    var x = document.getElementById("showClass"+item_no);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+    </script> -->
+    
+</head>
+<body>
+        <center>
+    <h1>Labeeb</h1>
+        </center>
+    <hr> 
+    <div >
+        <center>
+            <h3>
+    Pleae fill the form so we can get your medical record to the hospitals in Saudi Arabia. </h3>
+    </center></div>
+
+    <br> <br><br>
+    <div class="main-page">
+<div class="form-style-5">
+    <form method="POST" action="https://labeebhq.com:8443/records/">
+        <fieldset>
+        <legend><span class="number">1</span>Basic data</legend>
+          Full Name: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; <br />
+          <input type="text" name="name.en" value="" placeholder="Enter your full Name here" required="required" /> <br>
+          الاسم
+          <br><input type="text" name="name.ar" value="" placeholder="ادخل اسمك هنا"/><br /> 
+          gender :<br />
+          male: <input type="radio" name="gender" value="Male" checked="checked" /> <br>  
+          female: <input type="radio" name="gender" value="Female"  />  <br> <br>
+          Passport number :<br />
+          <input type="text" name="officialId" value="" placeholder="Enter your passport number here" /><br />
+          <!-- Age:<br />
+          <input type="range" name="age" min="0" max="100" value="25" /><br />
+          <br /> -->
+          date of birth:<br /> 
+          <input name="dateOfBirth" type="date" min="1900-01-01" max="2999-12-31"> <br>
+          Upload your image: <br>
+           <input type="file" name="image" id="pic"><br>
+        </fieldset>            <br><br>
+        <fieldset>
+
+            <legend><span class="number">2</span>Bio data</legend>
+            height: (cm)<br />
+          <input type="text" name="height" value="" required="required" /><br />
+          weight: (Kg)<br />
+          <input type="text" name="weight" value=""  required="required"  /><br />
+          skin color :<br />
+          <input type="text" name="skin" value="" /><br />
+          hair color :<br />
+          <input type="text" name="hair" value=""  /><br />
+        </fieldset><br><br>
+        <fieldset>
+            <legend><span class="number">3</span>Past medical and surgical history</legend>
+            Did you do any surgery before ? <br>
+            No: <input type="radio" name="surgery" value="false" checked="checked" /> <br>  
+            Yes: <input type="radio" name="surgery" value="true"  />  <br>
+            <dvi > <br /> What type of surgeries ? <br />
+                    <select name="surgicalHistory[0].name">
+                                <option value="Appendectomy">Appendectomy</option>                                
+                                <option value="BreastBiopsy">BreastBiopsy</option>
+                                <option value="others">others</option>
+                                <option value="None" selected="selected">none</option>
+                                <br /> 
+                        </select> <br>
+                        when did you do your surgery:<br /> 
+                        <input name="surgicalHistory[0].date" type="date" min="1900-01-01" max="2999-12-31"> <br>
+            </dvi>
+
+        </fieldset>
+<br><br>
+        <fieldset>
+                <legend><span class="number">4</span>Past and current medication</legend>
+                Are you taking medication now ? <br>
+                No: <input type="radio" name="currentmedicine" value="false" checked="checked" /> <br>  
+                Yes: <input type="radio" name="currentmedicine" value="true"  />  <br>
+                <dvi > <br> What type of  medications ? <br />
+                        <select name="medications[0].name">
+                                    <option value="Asperine">Asperine</option>
+                                    <option value="Cortezole">Cortezole</option>
+                                    <option value="Insulin">Insulin</option>                                    
+                                    <option value="others">others</option>
+                                    <option value="None" selected="selected">none</option>
+                                    
+                            </select><br />
+                            dosage :<br />
+                            <input type="text" name="medications[0].dosage" value="" placeholder="0 mg" /><br />
+                </dvi> <br>
+                Have you taken any medications before? <br>
+                No: <input type="radio" name="previousmedicine" value="false" checked="checked" /> <br>  
+                Yes: <input type="radio" name="previousmedicine" value="true" />  <br>
+                <dvi ><br> What type of medications ? <br />
+                    <select name="medications[1].name">
+                        <option value="Asperine">Asperine</option>
+                        <option value="Cortezole">Cortezole</option>
+                        <option value="Insulin">Insulin</option>     
+                        <option value="others">others</option>
+                        <option value="None" selected="selected">none</option>
+                        
+                </select><br />
+                dosage :<br />
+                <input type="text" name="medications[1].dosage" value="" placeholder="0 mg" /><br />
+                </dvi>
+            </fieldset>
+<br><br>
+            <fieldset>
+                    <legend><span class="number">5</span>Allergy</legend>
+                    do you have allergies ? <br>
+                    No: <input type="radio" name="allergy" value="false" checked="checked" /> <br>  
+                    Yes: <input type="radio" name="allergy" value="true" />  <br>
+                    <dvi ><br> What type of substance do you have allergy to ? <br>
+                            <select name="allergies[0].name">
+
+                                        <option value="Cortezole">Cortezole</option>
+                                        <option value="Asperine">Asperine</option>
+                                        <option value="Lactose">Lactose</option>
+                                            <option value="beens">beens</option>
+                                            <option value="soy">soy</option>
+                                            <option value="meat">meat</option>
+                                            <option value="others">others</option>
+                                    <option value="None" selected="selected">none</option>
+                                            
+                                </select>
+                    </dvi> <br>
+                    <dvi >other substances you have allergy to : <br>
+                        <select name="allergies[1].name">
+
+                                    <option value="Cortezole">Cortezole</option>
+                                    <option value="Asperine">Asperine</option>
+                                    <option value="Lactose">Lactose</option>
+                                        <option value="beens">beens</option>
+                                        <option value="soy">soy</option>
+                                        <option value="meat">meat</option>
+                                        <option value="others">others</option>
+                                    <option value="None" selected="selected">none</option>
+                                        
+                            </select>
+                </dvi>
+                </fieldset>
+
+<br><br>
+
+                    <fieldset>
+                            <legend><span class="number">6</span>physical or mental handicaps</legend>
+                            do you have any physical or mental handicaps ? <br>
+                            No: <input type="radio" name="handicap" value="false" checked="checked" /> <br>  
+                            Yes: <input type="radio" name="handicap" value="true" />  <br>
+                            <dvi> <br>please describe breifly
+                                    <input type="text" name="medicalNotes[0]" value="" /><br />
+                            </dvi>
+                        </fieldset>
+<br><br>
+                        <fieldset>
+                                <legend><span class="number">7</span>Contact list</legend>
+                                Name:<br />
+                                <input type="text" name="contactsList[0].name" value="" placeholder="Enter your contact Name here" required="required" /><br />
+                                phone number :<br />
+                                <input type="text" name="contactsList[0].number" value="" placeholder="Enter your phone number here" /><br />
+                                relation :<br />
+                                <select name="contactsList[0].relation">
+
+                                            <option value="father">father</option>
+                                            <option value="mother">mother</option>
+                                            <option value="son">son</option>
+                                            <option value="brother">brother</option>
+                                            <option value="relative">relative</option>
+                                            <option value="friend">friend</option>
+                                    </select>
+                            </fieldset>
+
+
+          <input type="submit" value="Submit"  />
+        <!-- <button type="button">
+
+        </button> -->
+        <br>
+ 
+      </form>
+      </div>
+    </div>
+      <br>
+ 
+</body>
+<script type="text/javascript">
+    //auto expand textarea
+    function adjust_textarea(h) {
+        h.style.height = "20px";
+        h.style.height = (h.scrollHeight)+"px";
+    }
+    </script>
+</html>

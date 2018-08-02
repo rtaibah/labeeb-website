@@ -1,0 +1,7 @@
+<nav class="navigation">
+  <div class="navigation__row">
+    {% assign current = page.url | downcase | split: '/' %}
+    <a href="{{ site.baseurl }}/" class="navigation__link">Home</a>
+    <a href="{{ site.baseurl }}/blog" {% if current[1] == 'blog' %} class="navigation__link active" {% else %} class="navigation__link" {% endif %}>Blog</a>
+  </div>
+</nav>

@@ -1,0 +1,47 @@
+# Site settings
+title: Labeeb 
+email: hello@labeeb.io 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://labeeb.io" # the base hostname & protocol for your site
+timezone: America/New_York
+
+# Build settings
+markdown: kramdown
+exclude: ["vendor"]
+
+site-twitter: labeebh1 #if your site has a twitter account, enter it here
+
+# Author Settings
+author: Labeeb Blog
+author-img: 
+description: Labeeb Hajj Solutions
+about-author:  # add description
+twitter: Labeebhq # add your Twitter handle
+github: Labeebhq # add your Github handle
+email: hello@labeeb.io # add your Email address
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins_dir:
+  - jekyll-sitemap
+  - jemoji
+# plugins:
+# - jekyll-autoprefixer
+gems:
+  - jekyll-paginate
+
+paginate: 10
+
+paginate_path: "/blog/page:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+excerpt_separator: <!--more-->
+
+# Sass settings
+sass:
+    sass_dir: _sass
+    style: :compressed
